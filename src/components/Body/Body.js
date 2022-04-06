@@ -1,5 +1,5 @@
 import React, { Component, useState, useEffect } from 'react'
-
+import './Body.scss'
 // class Body extends Component{
     
 //     constructor(props) {

@@ -3,7 +3,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
 import Body from './components/Body/Body';
-
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
 
@@ -13,9 +13,16 @@ function App() {
 
   return (
     <div className="App">
-    <Header Click={handleSearchClick}/>
-    <Body />
-    <Footer />
+      <Router>
+        {/* <Switch> */}
+          <Header Click={handleSearchClick} /> //new
+          {/* <Route exact path="/" component={Homepage} />
+          <Route exact path="/about" component={Aboutpage} /> */}
+          <Header />
+          <Body />
+          <Footer />
+        {/* </Switch> */}
+      </Router>
     </div>
   );
 }
